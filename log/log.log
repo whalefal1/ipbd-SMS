@@ -1,0 +1,183 @@
+2023-11-14 19:01:09.549  INFO 9080 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Starting IpbdSmsApplication using Java 1.8.0_362 on LAPTOP-9DMTHJ0M with PID 9080 (C:\Users\lipengxun\IdeaProjects\ipbd-sms\target\classes started by 李朋逊 in C:\Users\lipengxun\IdeaProjects\ipbd-sms)
+2023-11-14 19:01:09.559  INFO 9080 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 19:01:11.030  INFO 9080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-11-14 19:01:11.039  INFO 9080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 19:01:11.040  INFO 9080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 19:01:11.307  INFO 9080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 19:01:11.307  INFO 9080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1657 ms
+2023-11-14 19:01:11.416  INFO 9080 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-14 19:01:11.542  INFO 9080 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-14 19:01:14.776  INFO 9080 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 扩展消息转换器
+2023-11-14 19:01:14.782  INFO 9080 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 开始进行静态资源映射. . .
+2023-11-14 19:01:14.783  INFO 9080 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 运行成功...
+2023-11-14 19:01:15.199  INFO 9080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-14 19:01:15.211  INFO 9080 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Started IpbdSmsApplication in 6.166 seconds (JVM running for 8.705)
+2023-11-14 19:01:26.015  INFO 9080 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 19:01:26.015  INFO 9080 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 19:01:26.023  INFO 9080 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-11-14 19:01:34.769  INFO 9080 --- [http-nio-8081-exec-7] c.i.ipbdsms.controller.LoginController   : username:李朋逊
+2023-11-14 19:01:35.337 ERROR 9080 --- [http-nio-8081-exec-7] c.i.i.exception.GlobalExceptionHandler   : 未知异常！原因是:
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column '李朋逊' in 'where clause'
+### The error may exist in file [C:\Users\lipengxun\IdeaProjects\ipbd-sms\target\classes\mybatis\TbLoginMapper.xml]
+### The error may involve com.ipbd.ipbdsms.mapper.TbLoginMapper.selectPasswordByUsername-Inline
+### The error occurred while setting parameters
+### SQL: select password,role from tb_login where username = 李朋逊
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column '李朋逊' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column '李朋逊' in 'where clause'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:236) ~[spring-jdbc-5.3.30.jar:5.3.30]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73) ~[spring-jdbc-5.3.30.jar:5.3.30]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at com.sun.proxy.$Proxy74.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy75.selectPasswordByUsername(Unknown Source) ~[na:na]
+	at com.ipbd.ipbdsms.service.service.impl.TbLoginServiceImpl.login(TbLoginServiceImpl.java:37) ~[classes/:na]
+	at com.ipbd.ipbdsms.service.service.impl.TbLoginServiceImpl$$FastClassBySpringCGLIB$$680ee040.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-5.3.30.jar:5.3.30]
+	at com.ipbd.ipbdsms.service.service.impl.TbLoginServiceImpl$$EnhancerBySpringCGLIB$$d846d319.login(<generated>) ~[classes/:na]
+	at com.ipbd.ipbdsms.controller.LoginController.login(LoginController.java:28) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-embed-websocket-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_362]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column '李朋逊' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.22.jar:8.0.22]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483) ~[druid-1.2.16.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.10.jar:3.5.10]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	... 57 common frames omitted
+
+2023-11-14 19:05:25.625  INFO 9080 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-14 19:05:25.631  INFO 9080 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-14 19:05:40.871  INFO 19288 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Starting IpbdSmsApplication using Java 1.8.0_362 on LAPTOP-9DMTHJ0M with PID 19288 (C:\Users\lipengxun\IdeaProjects\ipbd-sms\target\classes started by 李朋逊 in C:\Users\lipengxun\IdeaProjects\ipbd-sms)
+2023-11-14 19:05:40.875  INFO 19288 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 19:05:42.207  INFO 19288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-11-14 19:05:42.217  INFO 19288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 19:05:42.218  INFO 19288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 19:05:42.476  INFO 19288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 19:05:42.476  INFO 19288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1531 ms
+2023-11-14 19:05:42.580  INFO 19288 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-14 19:05:42.699  INFO 19288 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-14 19:05:46.147  INFO 19288 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 扩展消息转换器
+2023-11-14 19:05:46.153  INFO 19288 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 开始进行静态资源映射. . .
+2023-11-14 19:05:46.154  INFO 19288 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 运行成功...
+2023-11-14 19:05:46.576  INFO 19288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-14 19:05:46.589  INFO 19288 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Started IpbdSmsApplication in 6.242 seconds (JVM running for 8.786)
+2023-11-14 19:06:00.228  INFO 19288 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 19:06:00.229  INFO 19288 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 19:06:00.233  INFO 19288 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-11-14 19:06:04.911  INFO 19288 --- [http-nio-8081-exec-4] c.i.ipbdsms.controller.LoginController   : username:123
+2023-11-14 19:06:13.598  INFO 19288 --- [http-nio-8081-exec-3] c.i.ipbdsms.controller.LoginController   : username:李朋逊
+2023-11-14 19:06:37.043  INFO 19288 --- [http-nio-8081-exec-9] c.i.ipbdsms.controller.LoginController   : username:徐华飞
+2023-11-14 19:09:27.110  INFO 19288 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-14 19:09:27.117  INFO 19288 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-14 19:09:33.050  INFO 15276 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Starting IpbdSmsApplication using Java 1.8.0_362 on LAPTOP-9DMTHJ0M with PID 15276 (C:\Users\lipengxun\IdeaProjects\ipbd-sms\target\classes started by 李朋逊 in C:\Users\lipengxun\IdeaProjects\ipbd-sms)
+2023-11-14 19:09:33.053  INFO 15276 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 19:09:34.388  INFO 15276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-11-14 19:09:34.397  INFO 15276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 19:09:34.398  INFO 15276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 19:09:34.653  INFO 15276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 19:09:34.654  INFO 15276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1530 ms
+2023-11-14 19:09:34.759  INFO 15276 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-14 19:09:34.874  INFO 15276 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-14 19:09:37.969  INFO 15276 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 扩展消息转换器
+2023-11-14 19:09:37.974  INFO 15276 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 开始进行静态资源映射. . .
+2023-11-14 19:09:37.975  INFO 15276 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 运行成功...
+2023-11-14 19:09:38.354  INFO 15276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-14 19:09:38.369  INFO 15276 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Started IpbdSmsApplication in 5.978 seconds (JVM running for 9.114)
+2023-11-14 19:10:07.608  INFO 15276 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 19:10:07.609  INFO 15276 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 19:10:07.611  INFO 15276 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-11-14 19:10:16.867  INFO 15276 --- [http-nio-8081-exec-2] c.i.ipbdsms.controller.LoginController   : username:super
+2023-11-14 19:10:52.147  INFO 15276 --- [http-nio-8081-exec-3] c.i.ipbdsms.controller.LoginController   : username:管理员
+2023-11-14 19:11:00.188  INFO 15276 --- [http-nio-8081-exec-4] c.i.ipbdsms.controller.LoginController   : username:管理员
+2023-11-14 19:11:15.782  INFO 15276 --- [http-nio-8081-exec-6] c.i.ipbdsms.controller.LoginController   : username:管理员
+2023-11-14 19:12:12.687  INFO 15276 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-14 19:12:12.693  INFO 15276 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-11-14 19:12:20.632  INFO 12224 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Starting IpbdSmsApplication using Java 1.8.0_362 on LAPTOP-9DMTHJ0M with PID 12224 (C:\Users\lipengxun\IdeaProjects\ipbd-sms\target\classes started by 李朋逊 in C:\Users\lipengxun\IdeaProjects\ipbd-sms)
+2023-11-14 19:12:20.635  INFO 12224 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-14 19:12:22.066  INFO 12224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-11-14 19:12:22.075  INFO 12224 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-14 19:12:22.075  INFO 12224 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-14 19:12:22.328  INFO 12224 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-14 19:12:22.329  INFO 12224 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1623 ms
+2023-11-14 19:12:22.435  INFO 12224 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-11-14 19:12:22.551  INFO 12224 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-11-14 19:12:25.682  INFO 12224 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 扩展消息转换器
+2023-11-14 19:12:25.689  INFO 12224 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 开始进行静态资源映射. . .
+2023-11-14 19:12:25.690  INFO 12224 --- [main] com.ipbd.ipbdsms.config.WebMvcConfig     : 运行成功...
+2023-11-14 19:12:26.085  INFO 12224 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-14 19:12:26.098  INFO 12224 --- [main] com.ipbd.ipbdsms.IpbdSmsApplication      : Started IpbdSmsApplication in 6.06 seconds (JVM running for 9.223)
+2023-11-14 19:12:36.627  INFO 12224 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-14 19:12:36.627  INFO 12224 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-14 19:12:36.630  INFO 12224 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-14 19:12:45.709  INFO 12224 --- [http-nio-8081-exec-2] c.i.ipbdsms.controller.LoginController   : username:管理员
+2023-11-14 19:13:10.254  INFO 12224 --- [http-nio-8081-exec-6] c.i.ipbdsms.controller.LoginController   : username:super
+2023-11-14 19:13:23.587  INFO 12224 --- [http-nio-8081-exec-5] c.i.ipbdsms.controller.LoginController   : username:super
+2023-11-14 19:22:25.982  INFO 12224 --- [http-nio-8081-exec-7] c.i.ipbdsms.controller.LoginController   : username:super
+2023-11-14 19:23:21.886  INFO 12224 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-11-14 19:23:21.891  INFO 12224 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

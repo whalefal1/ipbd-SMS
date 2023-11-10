@@ -1,0 +1,4 @@
+{
+  "msg": "Required request body is missing: public com.ipbd.ipbdsms.common.R com.ipbd.ipbdsms.controller.LoginController.login(java.util.Map<java.lang.String, java.lang.String>) throws java.security.NoSuchAlgorithmException",
+  "code": 500
+}

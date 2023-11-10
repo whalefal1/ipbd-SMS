@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <property name="LOG_HOME" value="${log.home}" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}[%L] - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_INFO"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/chain-log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/chain-log.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <MaxHistory>120</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}[%L] - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 打印sql语句 -->
+    <logger name="com.tech.module.base.dao.IndustrialChainDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.LabratoryDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.ResearchCenterDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.ResearcherDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.SchoolDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.SchSubDao" level="DEBUG" />
+    <logger name="com.tech.module.base.dao.SubjectDao" level="DEBUG" />
+
+    <logger name="org.apache.ibatis" level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <logger name="java.sql" level="debug">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE_INFO" />
+    </root>
+
+</configuration>

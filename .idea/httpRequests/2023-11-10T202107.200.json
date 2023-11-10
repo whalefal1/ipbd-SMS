@@ -1,0 +1,4 @@
+{
+  "msg": "Invalid bound statement (not found): com.ipbd.ipbdsms.mapper.TbLoginMapper.selectAll",
+  "code": 500
+}
