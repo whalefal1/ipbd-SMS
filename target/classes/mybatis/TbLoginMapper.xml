@@ -5,6 +5,6 @@
 <mapper namespace="com.ipbd.ipbdsms.mapper.TbLoginMapper">
 
   <select id="selectPasswordByUsername" parameterType="string" resultType="com.ipbd.ipbdsms.entity.TbLogin">
-    select password from tb_login where username = #{username}
+    select password,role from tb_login where username = ${username}
   </select>
 </mapper>
