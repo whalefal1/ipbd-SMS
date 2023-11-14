@@ -1,65 +1,69 @@
-/**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
-
 package com.ipbd.ipbdsms.common;
 
-
-
 import com.ipbd.ipbdsms.exception.ExceptionEnum;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 返回数据体
- *
- * @author Mark sunlightcs@gmail.com
+ * 通用响应结果类
+ *定义后端响应的格式
+ * @author 李朋逊
+ * @date 2023/06/17
  */
-public class R extends HashMap<String, Object> {
-	private static final long serialVersionUID = 1L;
-	
-	public R() {
-		put("code", 1);
-		put("msg", "success");
-	}
 
-	public static R error(int code, String msg) {
-		R r = new R();
-		r.put("code", code);
-		r.put("msg", msg);
-		return r;
-	}
 
-	public static R ok(String msg) {
-		R r = new R();
-		r.put("msg", msg);
-		return r;
-	}
-	
-	public static R ok(Map<String, Object> map) {
-		R r = new R();
-		r.putAll(map);
-		return r;
-	}
-	
-	public static R ok() {
-		return new R();
-	}
+@Data
+public class R<T> {
+    private Integer code; //1表示成功，0或其他数字表示失败
+    private String msg;     //错误信息
+    private T data;            //数据
+    private Map map = new HashMap();  //动态数据
 
-	public R put(String key, Object value) {
-		super.put(key, value);
-		return this;
-	}
+    private ExceptionEnum bodyNotMatch;
 
-	public static R error(ExceptionEnum exceptionEnum, String msg) {
-		R r = new R();
-		r.put("code", exceptionEnum.getResultCode());
-		r.put("msg", exceptionEnum.getResultMsg());
-		return r;
-	}
+    /*
+    功能实现成功响应实现方法
+     */
+    public static <T>  R<T> success(T object){
+         R<T> r = new R<>();
+         r.data = object;
+         r.code = 1;
+         return r;
+    }
+
+    /*
+    功能实现失败响应方法
+     */
+    public static <T>  R<T> error(String msg){
+        R<T> r = new R<>();
+        r.msg = msg;
+        r.code = 0;
+        return r;
+    }
+
+    public static R error(ExceptionEnum bodyNotMatch, String message) {
+        R r = new R<>();
+        r.bodyNotMatch = bodyNotMatch;
+        r.msg = message;
+        return r;
+    }
+    public static R error(int code, String message) {
+        R r = new R<>();
+        r.code = code;
+        r.msg = message;
+        return r;
+    }
+
+
+    /*
+    使用动态数据方法
+     */
+    public R<T> add(String key,Object value){
+      this.map.put(key,value);
+      return this;
+    }
+
+
 }

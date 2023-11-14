@@ -5,7 +5,7 @@
       <TemplateContext>
         <option name="generateConfig">
           <GenerateConfig>
-            <option name="annotationType" value="MYBATIS_PLUS3" />
+            <option name="annotationType" value="MYBATIS_PLUS2" />
             <option name="basePackage" value="generator" />
             <option name="basePath" value="src/main/java" />
             <option name="classNameStrategy" value="camel" />
@@ -68,18 +68,18 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="TbLogin" />
-                  <option name="tableName" value="tb_login" />
+                  <option name="className" value="TbSignInfo" />
+                  <option name="tableName" value="tb_sign_info" />
                 </TableUIInfo>
               </list>
             </option>
-            <option name="templatesName" value="mybatis-plus3" />
+            <option name="templatesName" value="mybatis-plus2" />
             <option name="useLombokPlugin" value="true" />
           </GenerateConfig>
         </option>
         <option name="moduleName" value="IPBD-SMS" />
         <option name="projectPath" value="$PROJECT_DIR$" />
-        <option name="templateName" value="mybatis-plus3" />
+        <option name="templateName" value="mybatis-plus2" />
       </TemplateContext>
     </option>
   </component>

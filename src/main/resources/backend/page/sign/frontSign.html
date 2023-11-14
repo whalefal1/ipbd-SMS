@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="../../plugins/element-ui/index.css" />
+    <link rel="stylesheet" href="../../styles/common.css" />
+    <link rel="stylesheet" href="../../styles/page.css" />
+</head>
+<body>
+<div class="addBrand-container" id="member-add-app">
+    <div class="container">
+
+        <el-form
+                ref="ruleForm"
+                :model="ruleForm"
+                :inline="false"
+                label-width="180px"
+                class="demo-ruleForm"
+        >
+            <el-row v-for="student in ruleForm.students" :key="student.stuName">
+            <el-form-item
+                    label="姓名:"
+                    prop="stuName"
+                    size="medium"
+            >
+                    {{student.stuName}}
+            </el-form-item>
+            <el-form-item
+                    label="签到:"
+                    prop="signUp"
+            >
+                <el-radio-group v-model="student.signUp" size="mini"@change="handleSignUpChange(student)">
+                    <el-radio-button label="准时"></el-radio-button>
+                    <el-radio-button label="迟到"  ></el-radio-button>
+                    <el-radio-button label="请假"></el-radio-button>
+                </el-radio-group>
+                <el-form-item
+                        prop="signUpRemark"
+                >
+                    <el-input v-model="student.signUpRemark" placeholder="请输入原因" v-if="student.showSignUp" ></el-input>
+                </el-form-item>
+            </el-form-item>
+            <el-form-item
+                    label="签退:"
+                    prop="signUp"
+            >
+                <el-radio-group v-model="student.signOut" size="mini"@change="handleSignOutChange(student)">
+                    <el-radio-button label="准时"></el-radio-button>
+                    <el-radio-button label="迟到"  ></el-radio-button>
+                    <el-radio-button label="请假"></el-radio-button>
+                </el-radio-group>
+                <el-form-item
+                        prop="signOutRemark"
+                >
+                    <el-input v-model="student.signOutRemark" placeholder="请输入原因"v-if="student.showSignOut"></el-input>
+                </el-form-item>
+            </el-form-item>
+                </el-form-item>
+            </el-row>
+        </el-form>
+    </div>
+
+    <div class="btnBox" align="center">
+        <el-button type="primary" @click="submitForm('ruleForm', true)">保存</el-button>
+        <el-button @click="goBack">返回</el-button>
+    </div>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="../../plugins/vue/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="../../plugins/element-ui/index.js"></script>
+<!-- 引入axios -->
+<script src="../../plugins/axios/axios.min.js"></script>
+<script src="../../js/request.js"></script>
+<script src="../../api/group.js"></script>
+<script src="../../js/validate.js"></script>
+<script src="../../js/index.js"></script>
+<script>
+    new Vue({
+        el: '#member-add-app',
+        data() {
+            return {
+                group: '前端',
+                actionType: '',
+                ruleForm:{
+                    students:[
+                        {
+                            stuId:'',
+                            stuName: '张三',
+                            signUp: '',
+                            signUpRemark: '',
+                            signOut: '',
+                            signOutRemark: '',
+                            showSignUp: false ,
+                            showSignOut:false,
+                        },{
+                            stuId:'',
+                            stuName: 'lii',
+                            signUp: '',
+                            signUpRemark: '',
+                            signOut: '准时',
+                            signOutRemark: '',
+                            showSignUp: false ,
+                            showSignOut:false,
+                        }]
+                },
+            }
+        },
+        created() {
+                this.init()
+        },
+        computed:{
+            rule(){
+                return{
+                        ruleForm: {
+                            students: []
+                        }
+                }
+            }
+        },
+        mounted() {
+        },
+        methods: {
+            async init () {
+                queryStuByGroup(this.group).then(res => {
+                    console.log(res)
+                    if (String(res.code) === '1') {
+                        this.ruleForm.students = res.data.map(item=>{
+                            const student = {}
+                            student.stuId = item.id
+                            student.stuName = item.stuName
+                            return student
+                        })
+                        console.log(this.ruleForm.students)
+                        // this.ruleForm.password = ''
+                    } else {
+                        this.$message.error(res.msg || '操作失败')
+                    }
+                })
+            },
+            submitForm (formName, st) {
+                this.$refs[formName].validate((valid) => {
+                        if (valid) {
+                            const params = this.ruleForm.students
+                            console.log(params)
+                            addSignInfo(params).then(res => {
+                                if (res.code === 1) {
+                                    alert('今日签到记录保存成功！')
+                                    this.goBack()
+                                    if (!st) {
+                                        this.goBack()
+                                    } else {
+                                        this.ruleForm.students=[]
+                                    }
+                                } else {
+                                    this.$message.error(res.msg || '操作失败')
+                                }
+                            }).catch(err => {
+                                this.$message.error('请求出错了：' + err)
+                            })
+                        } else {
+                            console.log('error submit!!')
+                            return false
+                        }
+                    })
+            },
+            goBack(){
+                window.parent.menuHandle({
+                    url: '/backend/page/sign/frontSign.html',
+                    name: '签到系统'
+                },false)
+            },
+            handleSignUpChange(student) {
+                if (student.signUp === '迟到' || student.signUp === '请假') {
+                        student.showSignUp = true;
+                        this.$forceUpdate(); // 手动触发一次更新
+                } else {
+                        student.showSignUp = false;
+                    this.$forceUpdate(); // 手动触发一次更新
+                }
+            },
+                handleSignOutChange(student) {
+                    if (student.signOut === '迟到' || student.signOut === '请假') {
+                        student.showSignOut = true; // 点击迟到或请假按钮时显示输入框
+                        this.$forceUpdate(); // 手动触发一次更新
+                    } else {
+                        student.showSignOut = false; // 点击其他按钮时隐藏输入框
+                        this.$forceUpdate(); // 手动触发一次更新
+                    }
+            }
+        }
+    })
+</script>
+</body>
+</html>

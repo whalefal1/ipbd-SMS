@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ipbd.ipbdsms.mapper.TbStuMapper">
+
+    <resultMap id="BaseResultMap" type="com.ipbd.ipbdsms.entity.TbStu">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="stuName" column="stu_name" jdbcType="VARCHAR"/>
+            <result property="stuGender" column="stu_gender" jdbcType="VARCHAR"/>
+            <result property="stuGroup" column="stu_group" jdbcType="VARCHAR"/>
+            <result property="stuGrade" column="stu_grade" jdbcType="INTEGER"/>
+            <result property="image" column="image" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,stu_name,stu_gender,
+        stu_group,stu_grade,image,
+        create_time,update_time,is_deleted
+    </sql>
+
+    <select id="selectGroupMember" parameterType="string" resultType="com.ipbd.ipbdsms.entity.TbStu">
+        select stu_name,id
+        from tb_stu
+        where stu_group = #{stuGroup}
+
+    </select>
+</mapper>

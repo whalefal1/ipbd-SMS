@@ -46,14 +46,14 @@ public class TbLoginServiceImpl extends ServiceImpl<TbLoginMapper, TbLogin>
                 //登录成功
                 StpUtil.login("admin");
                 StpUtil.getSession().set("authList", checkPermissionConfig.getPermissionList("admin", null));
-                log.info("admin登录");
+                log.info("admin{}登录",username);
                 return CommonConstant.LOGIN_RESPONSE_SUCCESS;
             }
             if(tbLogin.getRole() == 0 && tbLogin.getPassword().equals(encrypt(password))) {
                 //登录成功
                 StpUtil.login("super");
                 StpUtil.getSession().set("authList", checkPermissionConfig.getPermissionList("super", null));
-                log.info("super登录");
+                log.info("super:{}登录",username);
                 return CommonConstant.LOGIN_RESPONSE_SUCCESS;
             }
         }

@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
+import static com.ipbd.ipbdsms.common.CommonConstant.LOGIN_RESPONSE_SUCCESS;
+
 @RestController
 @RequestMapping
 @Tag(name = "登录接口")
@@ -25,14 +27,18 @@ public class LoginController  {
     @PostMapping("/login")
     public R login(@RequestBody Map<String,String> user) throws NoSuchAlgorithmException {
         log.info("username:{}",user.get("username"));
-        return R.ok(tbLoginService.login(user.get("username"), user.get("password")));
+        String login = tbLoginService.login(user.get("username"), user.get("password"));
+        if(login.equals(LOGIN_RESPONSE_SUCCESS)){
+            return R.success(login);
+        }
+        return R.error(login);
     }
 
     @PostMapping("/logout")
     @Operation(summary = "退出接口")
     public R logout() {
         StpUtil.logout(StpUtil.getLoginId());
-        return R.ok("退出成功");
+        return R.success("退出成功");
     }
 
 
@@ -40,7 +46,7 @@ public class LoginController  {
     @Operation(summary = "鉴权功能测试")
     @SaCheckPermission("admin:add")
     public R test(){
-        return R.ok("鉴权功能测试成功");
+        return R.success("鉴权功能测试成功");
     }
 
 

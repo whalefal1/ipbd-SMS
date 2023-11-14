@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.mysql.cj.MysqlType.JSON;
-
 @WebFilter(filterName = "LoginFilter", value = "/*")
 @Slf4j
 public class LoginFilter implements Filter {

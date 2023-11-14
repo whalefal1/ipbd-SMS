@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>瑞吉外卖管理端</title>
+    <title>ipbd-sms管理端</title>
     <link rel="shortcut icon" href="favicon.ico">
     <!-- 引入样式 -->
     <link rel="stylesheet" href="plugins/element-ui/index.css" />
@@ -19,7 +19,7 @@
         height: calc(100% - 64px);
       }
       .app-main .divTmp{
-        width: 100%;
+        width: 90%;
         height: 100%;
       }
     </style>
@@ -32,7 +32,7 @@
         <div class="sidebar-container">
           <div class="logo">
             <!-- <img src="images/logo.png" width="122.5" alt="" /> -->
-            <img src="images/login/login-logo.png" alt="" style="width: 117px; height: 32px" />
+            <img src="images/login/img.png" alt="" style="width: 117px; height: 32px" />
           </div>
 
           <el-scrollbar wrap-class="scrollbar-wrapper">
@@ -43,6 +43,7 @@
               background-color="#343744"
               text-color="#bfcbd9"
               active-text-color="#f4f4f5"
+              width="auto"
             >
               <div v-for="item in menuList" :key="item.id">
                 <el-submenu :index="item.id" v-if="item.children && item.children.length>0">
@@ -72,7 +73,7 @@
         <div class="main-container">
           <!-- <navbar /> -->
           <div class="navbar">
-            <div class="head-lable">
+            <div class="head-lable" >
               <span v-if="goBackFlag" class="goBack" @click="goBack()"
                 ><img src="images/icons/btn_back@2x.png" alt="" /> 返回</span
               >
@@ -124,39 +125,43 @@
               //   children: [
                   {
                     id: '2',
-                    name: '员工管理',
-                    url: 'page/member/list.html',
+                    name: '学员管理',
+                    url: 'page/stu/list.html',
                     icon: 'icon-member'
                   },
                   {
-                    id: '3',
-                    name: '分类管理',
-                    url: 'page/category/list.html',
-                    icon: 'icon-category'
-                  },
-                  {
                     id: '4',
-                    name: '菜品管理',
-                    url: 'page/food/list.html',
+                    name: '学习内容与计划',
+                    url: 'page/plan/list.html',
                     icon: 'icon-food'
                   },
-                  {
-                    id: '5',
-                    name: '套餐管理',
-                    url: 'page/combo/list.html',
-                    icon: 'icon-combo'
-                  },
-                  {
-                    id: '6',
-                    name: '订单明细',
-                    url: 'page/order/list.html',
-                    icon: 'icon-order'
-                  }
-              //   ],
-              // },
+              {
+                id: '5',
+                name: '后端组签到',
+                url: 'page/sign/javaSign.html',
+                icon: 'icon-member'
+              },
+              {
+                id: '6',
+                name: 'python组签到',
+                url: 'page/sign/pythonSign.html',
+                icon: 'icon-category'
+              },
+              {
+                id: '7',
+                name: '硬件组签到',
+                url: 'page/sign/hardwareSign.html',
+                icon: 'icon-food'
+              },
+              {
+                id: '8',
+                name: '算法组签到',
+                url: 'page/sign/algorithmSign.html',
+                icon: 'icon-combo'
+              },
             ],
-            iframeUrl: 'page/member/list.html',
-            headTitle: '员工管理',
+            iframeUrl: 'page/stu/list.html',
+            headTitle: '学生管理',
             goBackFlag: false,
             loading: true,
             timer: null

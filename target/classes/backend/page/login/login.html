@@ -64,7 +64,7 @@
       data() {
         return {
           loginForm:{
-            username: '123',
+            username: '李朋逊',
             password: '123456'
           },
           loading: false
@@ -100,7 +100,7 @@
             if (valid) {
               this.loading = true
               let res = await loginApi(this.loginForm)
-              if (String(res.msg) === '登录成功') {
+              if (String(res.data) === '登录成功') {
                 localStorage.setItem('userInfo',JSON.stringify(res.data))
                 window.location.href= '../../index.html'
               } else {

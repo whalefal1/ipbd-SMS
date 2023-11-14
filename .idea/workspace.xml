@@ -4,59 +4,95 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7f53dc1-502f-427f-ac32-7c23120486d2" name="Changes" comment="登录功能实现">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/api/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/404-images/404-cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/404-images/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/btn_back@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/btn_clean@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/btn_close@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/icon_index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/icon_upload@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/jine_m-2@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/renshu@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/icons/xiangmujine@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/images/noImg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/js/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/js/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/axios/axios.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/element-ui/fonts/element-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/element-ui/fonts/element-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/element-ui/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/element-ui/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/plugins/vue/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/fonts/element-icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/fonts/element-icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/demo_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/icon/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/login.css" afterDir="false" />
+    <list default="true" id="b7f53dc1-502f-427f-ac32-7c23120486d2" name="Changes" comment="登录前端+功能完善">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cn_hutool_hutool_all_5_7_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef597fb-de04-49f0-836c-3f219a89b42c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ef597fb-de04-49f0-836c-3f219a89b42c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IPBD-SMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IPBD-SMS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/common/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/config/SaTokenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/config/SaTokenConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.log.2023-11-10.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.log.2023-11-13.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/IpbdSmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/IpbdSmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/common/R.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/entity/TbLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/entity/TbLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/filter/LoginFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/service/service/impl/TbLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ipbd/ipbdsms/service/service/impl/TbLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/TbLoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/TbLoginMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/common/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/common/R.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/config/SaTokenConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/config/SaTokenConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/service/service/impl/TbLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/service/service/impl/TbLoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ipbd/ipbdsms/selectTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/js/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/js/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ipbd/ipbdsms/IpbdSmsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ipbd/ipbdsms/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/404-images/404-cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/404-images/404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_back@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_clean@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/btn_close@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/icon_index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/icon_upload@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/jine_m-2@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/renshu@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/icons/xiangmujine@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/login/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/login/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/images/noImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/js/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/page/login/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/axios/axios.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/fonts/element-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/element-ui/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/plugins/vue/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/fonts/element-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/demo_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/icon/iconfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/backend/styles/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/IpbdSmsApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/authority/AdminAuthority$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/authority/AdminAuthority.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/authority/Authority.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/authority/SuperAuthority$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/authority/SuperAuthority.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/common/CommonConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/common/JacksonObjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/common/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/config/CheckPermissionConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/config/SaTokenConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/config/WebMvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/entity/TbLogin$TbLoginBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/entity/TbLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/exception/ExceptionEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/mapper/TbLoginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/service/service/TbLoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ipbd/ipbdsms/service/service/impl/TbLoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/TbLoginMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ipbd/ipbdsms/IpbdSmsApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ipbd/ipbdsms/test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +106,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -94,6 +131,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -103,7 +141,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lipengxun/IdeaProjects/ipbd-sms/src/main/resources/backend/images/login&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lipengxun/IdeaProjects/ipbd-sms/src/main/resources/backend/page/sign&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -126,13 +164,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend\page\sign" />
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend\styles" />
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend\api" />
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend\page\plan" />
       <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend\images\login" />
-      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\backend" />
-      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources" />
-      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\static" />
-      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\java\com\ipbd\ipbdsms" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\test" />
+      <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\mybatis" />
       <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\static" />
       <recent name="C:\Users\lipengxun\IdeaProjects\ipbd-sms\src\main\resources\mbatis" />
     </key>
@@ -142,16 +182,36 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.IpbdSmsApplication">
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="运行单个请求">
+    <configuration name="QrCodeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ipbd.ipbdsms.utils.QrCodeUtil" />
+      <module name="IPBD-SMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipbd.ipbdsms.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QrUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ipbd.ipbdsms.utils.QrUtil" />
+      <module name="IPBD-SMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ipbd.ipbdsms.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="运行单个请求">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="运行单个请求">
-      <method v="2" />
-    </configuration>
-    <configuration name="selectTest.selectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IpbdSmsApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IPBD-SMS" />
       <extension name="coverage">
         <pattern>
@@ -160,8 +220,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ipbd.ipbdsms" />
-      <option name="MAIN_CLASS_NAME" value="com.ipbd.ipbdsms.selectTest" />
-      <option name="METHOD_NAME" value="selectAll" />
+      <option name="MAIN_CLASS_NAME" value="com.ipbd.ipbdsms.IpbdSmsApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.QrUtil" />
+        <item itemvalue="应用程序.QrCodeUtil" />
+        <item itemvalue="JUnit.IpbdSmsApplicationTests.test" />
+        <item itemvalue="HTTP 请求.generated-requests | #5" />
         <item itemvalue="JUnit.test.test" />
-        <item itemvalue="HTTP 请求.generated-requests | #1" />
-        <item itemvalue="HTTP 请求.generated-requests | #3" />
-        <item itemvalue="HTTP 请求.generated-requests | #2" />
-        <item itemvalue="JUnit.selectTest.selectAll" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +278,28 @@
       <workItem from="1699871302532" duration="4585000" />
       <workItem from="1699875931312" duration="810000" />
       <workItem from="1699876870494" duration="2756000" />
-      <workItem from="1699958886214" duration="2054000" />
+      <workItem from="1699958886214" duration="2737000" />
+      <workItem from="1700368706527" duration="270000" />
+      <workItem from="1701500199573" duration="975000" />
+      <workItem from="1701673848801" duration="18361000" />
+      <workItem from="1701772374481" duration="11995000" />
+      <workItem from="1701865334066" duration="1128000" />
+      <workItem from="1701909878573" duration="3940000" />
+      <workItem from="1701913866075" duration="827000" />
+      <workItem from="1701914760085" duration="365000" />
+      <workItem from="1701915517338" duration="624000" />
+      <workItem from="1701944752326" duration="12424000" />
+      <workItem from="1701958048210" duration="834000" />
+      <workItem from="1701958890546" duration="1359000" />
+      <workItem from="1701996028414" duration="6627000" />
+      <workItem from="1702016969695" duration="120000" />
+      <workItem from="1702017133335" duration="5256000" />
+      <workItem from="1702038144896" duration="5070000" />
+      <workItem from="1702106706111" duration="30000" />
+      <workItem from="1702554859460" duration="3052000" />
+      <workItem from="1702558430394" duration="2034000" />
+      <workItem from="1702560489799" duration="6000" />
+      <workItem from="1702899080152" duration="444000" />
     </task>
     <task id="LOCAL-00001" summary="鉴权demo+全局异常处理">
       <created>1699616488773</created>
@@ -234,7 +315,28 @@
       <option name="project" value="LOCAL" />
       <updated>1699622377149</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登录前端+功能完善">
+      <created>1699961331112</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699961331112</updated>
+    </task>
+    <task id="LOCAL-00004" summary="登录前端+功能完善">
+      <created>1699961394712</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699961394712</updated>
+    </task>
+    <task id="LOCAL-00005" summary="登录前端+功能完善">
+      <created>1699961495121</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699961495121</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +368,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="鉴权demo+全局异常处理" />
     <MESSAGE value="登录功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录功能实现" />
+    <MESSAGE value="登录前端+功能完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录前端+功能完善" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
